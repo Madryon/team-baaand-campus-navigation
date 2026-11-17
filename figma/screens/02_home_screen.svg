@@ -1,0 +1,15 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844">
+  <rect width="390" height="844" rx="40" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="4"/>
+  <rect width="390" height="44" fill="#1B365D"/>
+  <text x="20" y="28" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">9:41 · Campus Finder</text>
+  <rect x="20" y="70" width="350" height="650" rx="16" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="40" y="120" fill="#0F172A" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold">Where are you heading?</text>
+  <text x="40" y="150" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="13">Search department, room, facility...</text>
+  <rect x="40" y="180" width="310" height="2" fill="#F1F5F9"/>
+  <rect x="40" y="210" width="310" height="120" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="60" y="250" fill="#1B365D" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold">Verified Physical Signboard Cues</text>
+  <text x="60" y="275" fill="#334155" font-family="Inter, system-ui, sans-serif" font-size="12">Nearest Gate: Gate 4 (Arts Gate) · 180m</text>
+  <text x="60" y="300" fill="#028090" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">✓ Step-Free Ramp Route Verified</text>
+  <rect x="20" y="744" width="350" height="50" rx="8" fill="#1B365D"/>
+  <text x="140" y="775" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold">Continue Flow →</text>
+</svg>

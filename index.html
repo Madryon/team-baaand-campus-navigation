@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team BAAAND — Phase 3 Master Deliverables Hub</title>
+  <link rel="stylesheet" href="prototype-final/tokens.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: var(--font-family-base, 'Inter', system-ui, sans-serif);
+      background-color: #0B132B;
+      color: #0F172A;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+    .hub-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 48px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+    .header-badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      background: #E0F2FE;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      margin-bottom: 12px;
+    }
+    h1.hub-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--color-primary);
+      margin-bottom: 8px;
+    }
+    p.hub-subtitle {
+      font-size: 16px;
+      color: #475569;
+      margin-bottom: 24px;
+    }
+    .quick-actions-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 36px;
+    }
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background-color: var(--color-primary);
+      color: #FFFFFF;
+    }
+    .btn-primary:hover {
+      background-color: #122543;
+    }
+    .btn-accent {
+      background-color: var(--color-accent);
+      color: #FFFFFF;
+    }
+    .btn-accent:hover {
+      background-color: #01626F;
+    }
+    .btn-figma {
+      background-color: #0F172A;
+      color: #FFFFFF;
+      border: 1px solid #334155;
+    }
+    .btn-figma:hover {
+      background-color: #1E293B;
+    }
+    .btn-outline {
+      background-color: #FFFFFF;
+      color: var(--color-primary);
+      border: 1px solid #CBD5E1;
+    }
+    .btn-outline:hover {
+      background-color: #F1F5F9;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-top: 32px;
+      margin-bottom: 16px;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .grid-3col {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .card-item {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 18px 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+      border-color: #CBD5E1;
+    }
+    .card-item h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .card-item p {
+      font-size: 13px;
+      color: #64748B;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .card-link {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .card-link:hover {
+      text-decoration: underline;
+    }
+    .tag-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .tag-green { background: #DCFCE7; color: #15803D; }
+    .tag-blue { background: #E0F2FE; color: #0284C7; }
+    .tag-purple { background: #F3E8FF; color: #7E22CE; }
+    .meta-box {
+      background: #F8FAFC;
+      border-left: 4px solid var(--color-primary);
+      padding: 16px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #334155;
+      margin-top: 36px;
+    }
+    @media (max-width: 768px) {
+      .grid-2col, .grid-3col { grid-template-columns: 1fr; }
+      .hub-container { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hub-container">
+    <span class="header-badge">Team BAAAND · Final Deliverables Hub</span>
+    <h1 class="hub-title">Campus Navigation System (Phase 3: Design, Test & Iterate)</h1>
+    <p class="hub-subtitle">
+      All project files, working prototypes, comprehensive reports, executive presentation deck, test kits, design system tokens, and Figma files unified in one place.
+    </p>
+
+    <!-- Quick Action Launchpad -->
+    <div class="quick-actions-bar">
+      <a href="prototype-final/index.html" target="_blank" class="action-btn btn-primary">
+        🚀 Launch Final Prototype (v2)
+      </a>
+      <a href="https://www.figma.com/design/UVo294wG285kYbtI9eBYaE" target="_blank" class="action-btn btn-figma">
+        🎨 Open Figma File (Live)
+      </a>
+      <a href="Phase3_Report.pdf" target="_blank" class="action-btn btn-accent">
+        📄 Download PDF Report
+      </a>
+      <a href="Phase3_Report.docx" target="_blank" class="action-btn btn-outline">
+        📝 Word Report (.docx)
+      </a>
+      <a href="presentation/index.html" target="_blank" class="action-btn btn-outline">
+        📊 14-Slide Presentation Deck
+      </a>
+      <a href="BAAAND_Phase3_Complete_Deliverables.zip" download class="action-btn btn-outline" style="background: #F1F5F9;">
+        📦 Download All-In-One ZIP (2.6 MB)
+      </a>
+    </div>
+
+    <!-- Section 1: Figma Master Links -->
+    <div class="section-title">
+      <span>1. Figma Workspace & Screen Exports</span>
+      <span style="font-size: 13px; font-weight: normal; color: #64748B;">Key: <code>UVo294wG285kYbtI9eBYaE</code></span>
+    </div>
+    <div class="grid-3col">
+      <div class="card-item">
+        <span class="tag-badge tag-purple">Page 1 in Figma</span>
+        <h3>🎨 Design System & Audit</h3>
+        <p>Foundational tokens, WCAG AA contrast values, typography scale, 44px buttons, gate badges, and heuristic matrix.</p>
+        <a href="https://www.figma.com/design/UVo294wG285kYbtI9eBYaE?node-id=0-1" target="_blank" class="card-link">Open Page 1 in Figma →</a>
+      </div>
+      <div class="card-item">
+        <span class="tag-badge tag-purple">Page 2 in Figma</span>
+        <h3>📱 Screens v1 (Baseline)</h3>
+        <p>6 high-fidelity mobile frames (390×844px) representing the initial prototype before iteration.</p>
+        <a href="https://www.figma.com/design/UVo294wG285kYbtI9eBYaE?node-id=1-4" target="_blank" class="card-link">Open Page 2 in Figma →</a>
+      </div>
+      <div class="card-item">
+        <span class="tag-badge tag-purple">Page 3 in Figma</span>
+        <h3>✨ Screens v2 (Final)</h3>
+        <p>4 remediated mobile frames with iteration badges: progress bar, archway visual, exit HUD, persistent off-route banner.</p>
+        <a href="https://www.figma.com/design/UVo294wG285kYbtI9eBYaE?node-id=1-5" target="_blank" class="card-link">Open Page 3 in Figma →</a>
+      </div>
+      <div class="card-item">
+        <span class="tag-badge tag-blue">Reference File</span>
+        <h3>🔗 Phase 2 Figma File</h3>
+        <p>Original Phase 2 requirements, wireframes, information architecture and feature prioritization file.</p>
+        <a href="https://www.figma.com/design/sO6MeBzi4YVVCDcZI4TMOV" target="_blank" class="card-link">Open Phase 2 Reference →</a>
+      </div>
+      <div class="card-item">
+        <span class="tag-badge tag-green">Specification</span>
+        <h3>📐 Figma Build Spec</h3>
+        <p>Frame sizes, layer hierarchies, component variants, design system token mappings, and prototype wiring matrix.</p>
+        <a href="figma/BUILD-SPEC.md" target="_blank" class="card-link">Read BUILD-SPEC.md →</a>
+      </div>
+      <div class="card-item">
+        <span class="tag-badge tag-green">Assets</span>
+        <h3>🖼️ 16 Standalone Vector SVGs</h3>
+        <p>Standalone SVG exports of all 16 prototype screens ready for direct drag-and-drop into any design canvas.</p>
+        <a href="figma/screens/" target="_blank" class="card-link">Browse figma/screens/ →</a>
+      </div>
+    </div>
+
+    <!-- Section 2: Comprehensive Report (All Formats) -->
+    <div class="section-title">
+      <span>2. Consolidated Phase 3 Final Report</span>
+      <span style="font-size: 13px; font-weight: normal; color: #64748B;">All 10 Sections Combined</span>
+    </div>
+    <div class="grid-3col">
+      <div class="card-item">
+        <span class="tag-badge tag-green">Print Ready</span>
+        <h3>📕 Phase 3 Report (PDF)</h3>
+        <p>991 KB print-ready document containing the complete findings, audits, matrices, screenshots, and roadmap.</p>
+        <a href="Phase3_Report.pdf" target="_blank" class="card-link">Open Phase3_Report.pdf →</a>
+      </div>
+      <div class="card-item">
+        <span class="tag-badge tag-blue">Editable Format</span>
+        <h3>📘 Phase 3 Report (Word / .docx)</h3>
+        <p>71 KB fully editable Microsoft Word document with tables, bullet lists, bold headers, and styled callouts.</p>
+        <a href="Phase3_Report.docx" target="_blank" class="card-link">Download Phase3_Report.docx →</a>
+      </div>
+      <div class="card-item">
+        <span class="tag-badge tag-purple">Web Format</span>
+        <h3>🌐 Phase 3 Report (HTML)</h3>
+        <p>111 KB self-contained interactive web document with print stylesheets and styled data tables.</p>
+        <a href="Phase3_Report.html" target="_blank" class="card-link">View Phase3_Report.html →</a>
+      </div>
+    </div>
+
+    <!-- Section 3: Interactive Prototypes -->
+    <div class="section-title">
+      <span>3. Working Prototypes & UI States</span>
+      <span style="font-size: 13px; font-weight: normal; color: #64748B;">Mobile-First (390×844)</span>
+    </div>
+    <div class="grid-3col">
+      <div class="card-item" style="border-color: var(--color-accent); border-width: 2px;">
+        <span class="tag-badge tag-green">Final Iteration (Recommended)</span>
+        <h3>🚀 Prototype v2 (Final)</h3>
+        <p>16 screens with 10 heuristic fixes: route progress bar, exit HUD, fuzzy search, Gate 4 proximity badges, persistent off-route banner.</p>
+        <a href="prototype-final/index.html" target="_blank" class="card-link">Open Final Prototype (v2) →</a>
+      </div>
+      <div class="card-item">
+        <span class="tag-badge tag-blue">Baseline Build</span>
+        <h3>📱 Prototype v1 (Initial)</h3>
+        <p>Initial 16-screen baseline build before audit and iteration; preserved for authentic before/after comparative analysis.</p>
+        <a href="prototype/index.html" target="_blank" class="card-link">Open Baseline Prototype (v1) →</a>
+      </div>
+      <div class="card-item">
+        <span class="tag-badge tag-purple">Component Testing</span>
+        <h3>🎛️ UI States Catalog</h3>
+        <p>Interactive catalog showcasing default, hover, focus, skeleton loading, empty search, GPS denied, offline, and success states.</p>
+        <a href="prototype/states.html" target="_blank" class="card-link">Open States Catalog →</a>
+      </div>
+    </div>
+
+    <!-- Section 4: Presentation & Core Documentation -->
+    <div class="section-title">
+      <span>4. Executive Presentation & Core Documentation</span>
+      <span style="font-size: 13px; font-weight: normal; color: #64748B;">10 Core Documentation Files</span>
+    </div>
+    <div class="grid-2col">
+      <div class="card-item">
+        <span class="tag-badge tag-blue">Executive Deck</span>
+        <h3>📊 14-Slide Interactive Presentation</h3>
+        <p>Complete slide deck with keyboard arrows, progress bar, stat callouts, and conclusion. Built for presentation to evaluators.</p>
+        <a href="presentation/index.html" target="_blank" class="card-link" style="margin-right: 16px;">Launch Slide Deck →</a>
+        <a href="presentation/slides.md" target="_blank" class="card-link" style="color: #64748B;">Markdown Source →</a>
+      </div>
+      <div class="card-item">
+        <span class="tag-badge tag-green">Traceability</span>
+        <h3>🧭 Traceability Matrix</h3>
+        <p>Matrix tracing Phase 1 research findings (Saket, Akansha, Deepika) to Phase 2 features, screens, and design decisions (100% Must/Should/Could).</p>
+        <a href="docs/09-rationale-traceability.md" target="_blank" class="card-link">Read Traceability Matrix →</a>
+      </div>
+      <div class="card-item">
+        <span class="tag-badge tag-purple">Design System</span>
+        <h3>🎨 Design System & Tokens</h3>
+        <p>Tokens specification, 4pt/8pt grid, WCAG AA contrast ratio table, and 10 reusable component patterns.</p>
+        <a href="docs/01-design-system.md" target="_blank" class="card-link" style="margin-right: 16px;">Read Design System Doc →</a>
+        <a href="prototype-final/tokens.css" target="_blank" class="card-link" style="color: #64748B;">tokens.css →</a>
+      </div>
+      <div class="card-item">
+        <span class="tag-badge tag-green">Visual Audit</span>
+        <h3>🔍 Before & After Comparison</h3>
+        <p>Side-by-side analysis and live screenshots comparing Prototype v1 vs Prototype v2 across Home, Detail, Route, Navigate, and Search.</p>
+        <a href="docs/07-before-after.md" target="_blank" class="card-link" style="margin-right: 16px;">View Before/After Doc →</a>
+        <a href="docs/07-iteration-log.md" target="_blank" class="card-link" style="color: #64748B;">Iteration Log →</a>
+      </div>
+      <div class="card-item">
+        <span class="tag-badge tag-blue">Usability Protocol</span>
+        <h3>🧪 Usability Testing Kit</h3>
+        <p>Screener criteria, informed consent, moderator script, tasks T1–T6, observer sheet, and cognitive walkthrough (Results marked PENDING).</p>
+        <a href="docs/05-usability-testing.md" target="_blank" class="card-link">View Usability Kit →</a>
+      </div>
+      <div class="card-item">
+        <span class="tag-badge tag-purple">Roadmap</span>
+        <h3>🔭 Future Scope & Reflection</h3>
+        <p>2027 roadmap (physical signage QR pilot, indoor BLE beacons, live transit, PwD testing) and candid design reflections.</p>
+        <a href="docs/10-future-scope-reflection.md" target="_blank" class="card-link">Read Roadmap & Reflection →</a>
+      </div>
+    </div>
+
+    <!-- Section 5: Team & Submission Checklist -->
+    <div class="section-title">
+      <span>5. Project Administration & Quality Assurance</span>
+    </div>
+    <div class="grid-3col">
+      <div class="card-item">
+        <h3>📋 Submission Checklist</h3>
+        <p>Complete verification table mapping all 11 required project deliverables to exact file paths and links.</p>
+        <a href="submission-checklist.md" target="_blank" class="card-link">Open Checklist →</a>
+      </div>
+      <div class="card-item">
+        <h3>👥 Team Contributions</h3>
+        <p>Contribution table for Chinnala Bhargavi, Nishi Patwari, Anushka Shailani, Aman, Ankit Kumar, Deepansh Maurya.</p>
+        <a href="docs/contributions.md" target="_blank" class="card-link">View Contributions Table →</a>
+      </div>
+      <div class="card-item">
+        <h3>⚙️ Automated Audit Scripts</h3>
+        <p>Node.js scripts verifying WCAG 2.2 AA contrast compliance, $\ge 44\times44$px touch targets, and 10/10 heuristic fixes.</p>
+        <a href="audit_runner_v2.js" target="_blank" class="card-link">View audit_runner_v2.js →</a>
+      </div>
+    </div>
+
+    <!-- Metadata Footnote -->
+    <div class="meta-box">
+      <strong>Team BAAAND:</strong> Chinnala Bhargavi · Nishi Patwari · Anushka Shailani · Aman · Ankit Kumar · Deepansh Maurya<br>
+      <strong>Master Figma File:</strong> <a href="https://www.figma.com/design/UVo294wG285kYbtI9eBYaE" target="_blank">https://www.figma.com/design/UVo294wG285kYbtI9eBYaE</a> (Key: <code>UVo294wG285kYbtI9eBYaE</code>)<br>
+      <strong>All Deliverables ZIP:</strong> <a href="BAAAND_Phase3_Complete_Deliverables.zip" download>BAAAND_Phase3_Complete_Deliverables.zip</a> (2.6 MB)
+    </div>
+
+  </div>
+
+</body>
+</html>

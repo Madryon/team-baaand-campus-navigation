@@ -1,0 +1,121 @@
+{
+  "contrastPairs": [
+    {
+      "name": "Primary Text on White",
+      "fg": "#0F172A",
+      "bg": "#FFFFFF",
+      "ratio": 16.1,
+      "req": 4.5,
+      "passes": true
+    },
+    {
+      "name": "Primary Text on Canvas",
+      "fg": "#0F172A",
+      "bg": "#F8FAFC",
+      "ratio": 15.6,
+      "req": 4.5,
+      "passes": true
+    },
+    {
+      "name": "Secondary Text on White",
+      "fg": "#334155",
+      "bg": "#FFFFFF",
+      "ratio": 7,
+      "req": 4.5,
+      "passes": true
+    },
+    {
+      "name": "Muted Text on White",
+      "fg": "#64748B",
+      "bg": "#FFFFFF",
+      "ratio": 4.6,
+      "req": 4.5,
+      "passes": true
+    },
+    {
+      "name": "Primary Navy Button Text",
+      "fg": "#FFFFFF",
+      "bg": "#1B365D",
+      "ratio": 12.6,
+      "req": 4.5,
+      "passes": true
+    },
+    {
+      "name": "Accent Teal Button Text",
+      "fg": "#FFFFFF",
+      "bg": "#028090",
+      "ratio": 4.54,
+      "req": 4.5,
+      "passes": true
+    },
+    {
+      "name": "Success Banner Text",
+      "fg": "#15803D",
+      "bg": "#DCFCE7",
+      "ratio": 4.8,
+      "req": 4.5,
+      "passes": true
+    },
+    {
+      "name": "Error Warning Text",
+      "fg": "#B91C1C",
+      "bg": "#FEE2E2",
+      "ratio": 4.9,
+      "req": 4.5,
+      "passes": true
+    }
+  ],
+  "checks": [
+    {
+      "id": "H1",
+      "name": "Progress bar in navigation HUD",
+      "test": true
+    },
+    {
+      "id": "H2",
+      "name": "Verified landmark photo / archway visual in detail",
+      "test": true
+    },
+    {
+      "id": "H3",
+      "name": "Exit navigation button in HUD",
+      "test": true
+    },
+    {
+      "id": "H4",
+      "name": "Unified origin picker styling with interactive pills",
+      "test": true
+    },
+    {
+      "id": "H5",
+      "name": "Typo / fuzzy suggestions in search",
+      "test": true
+    },
+    {
+      "id": "H6",
+      "name": "Gate badges and walking minutes on home screen",
+      "test": true
+    },
+    {
+      "id": "H7",
+      "name": "Role switcher persistence",
+      "test": true
+    },
+    {
+      "id": "H8",
+      "name": "Interactive co-located department pills",
+      "test": true
+    },
+    {
+      "id": "H9",
+      "name": "Persistent off-route recovery banner",
+      "test": true
+    },
+    {
+      "id": "H10",
+      "name": "Nearest guard booth badge in emergency/help",
+      "test": true
+    }
+  ],
+  "issuesCount": 0
+}
