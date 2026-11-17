@@ -219,12 +219,12 @@ function initModeSwitcher() {
       navigateTo('screen-visitor');
     } else if (role === 'insider') {
       appState.guidanceEnabled = false;
-      showToast('Insider Mode: Route guidance prompts turned OFF for Arjun');
+      showToast('Insider Mode: Route guidance prompts turned OFF');
       navigateTo('screen-home');
       renderInsiderHome();
     } else {
       appState.guidanceEnabled = true;
-      showToast('Switched to New Student Mode (Ananya): Step-by-step guidance ON');
+      showToast('Switched to New Student Mode: Step-by-step guidance ON');
       navigateTo('screen-home');
       renderStudentHome();
     }
@@ -911,7 +911,7 @@ function updateBookmarkButton() {
   btn.style.fontWeight = isSaved ? 'var(--font-bold)' : 'var(--font-normal)';
 }
 
-// Visitor Mode (Meera Flow)
+// Visitor Mode
 window.visitorSelectGate = function(gateNumber) {
   showToast(`Welcome! Setting entry at Gate ${gateNumber}`);
   appState.selectedOrigin = `Gate ${gateNumber}`;

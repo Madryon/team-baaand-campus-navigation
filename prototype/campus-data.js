@@ -210,7 +210,7 @@ const CAMPUS_DATA = {
       ],
       description: "Primary welcome hub for first-time visitors, guest lecturers, official delegates, and parents.",
       accessibility: "Level entry from Gate 1 driveway, automatic entrance doors, accessible help counters.",
-      tags: ["Visitor", "Reception", "Helpdesk", "Admin", "Meera", "Gate 1"]
+      tags: ["Visitor", "Reception", "Helpdesk", "Admin", "Gate 1"]
     },
     {
       id: "cent-canteen",

@@ -9,7 +9,7 @@ const appState = {
   currentScreen: 'screen-splash',
   screenHistory: [],
   selectedRole: 'student', // 'student' | 'visitor' | 'insider'
-  guidanceEnabled: true,   // false in Insider mode for Arjun
+  guidanceEnabled: true,   // false in Insider mode
   accessibleRoute: false,  // true when wheelchair / ramp mode enabled
   savedPlaceIds: ['dept-or'], // pre-saved for demonstration
   activePlace: null,
@@ -198,12 +198,12 @@ function initModeSwitcher() {
       navigateTo('screen-visitor');
     } else if (role === 'insider') {
       appState.guidanceEnabled = false;
-      showToast('Insider Mode: Route guidance prompts turned OFF for Arjun');
+      showToast('Insider Mode: Route guidance prompts turned OFF');
       navigateTo('screen-home');
       renderInsiderHome();
     } else {
       appState.guidanceEnabled = true;
-      showToast('Switched to New Student Mode (Ananya): Step-by-step guidance ON');
+      showToast('Switched to New Student Mode: Step-by-step guidance ON');
       navigateTo('screen-home');
       renderStudentHome();
     }
@@ -607,7 +607,7 @@ function renderSavedList() {
   }
 }
 
-// Visitor Mode (Meera Flow)
+// Visitor Mode
 window.visitorSelectGate = function(gateNumber) {
   showToast(`Welcome! Setting entry at Gate ${gateNumber}`);
   // Target visitor reception near Gate 1

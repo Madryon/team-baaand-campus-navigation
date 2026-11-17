@@ -37,12 +37,12 @@
 ---
 
 ## Slide 4: User Personas & The Anti-Persona
-- **Primary Persona: Ananya (New Master's Student)**
+- **Primary Persona: New Master's Student**
   - *Goal:* Reach the Dept. of Operational Research on time without anxiety.
   - *Need:* High-touch landmark cues, verified gate numbers, walking time estimates.
-- **Secondary Persona: Meera (First-Time Visitor)**
+- **Secondary Persona: First-Time Visitor**
   - *Goal:* Attend a conference in the Central Quad; needs public parking & reception.
-- **Anti-Persona: Arjun (Campus Insider)**
+- **Anti-Persona: Campus Insider**
   - *Behavior:* Knows the shortcuts; finds step-by-step landmark banners annoying.
   - *Design Response:* **Insider Mode** suppresses navigation prompts and yields full map screen space.
 
